@@ -1,0 +1,71 @@
+.list-anime{
+  height: 1000px;
+  overflow-y: scroll;
+}
+
+.list-anime ul li a{
+  margin-bottom: 10px;
+}
+.list-anime ul li a,img,.detial-anime{
+  float: left;
+}
+.list-anime ul li a img{
+  width: 200px;
+  height: 100px;
+}
+.detial-anime{
+  margin-left: .5em;
+}
+.detial-anime h6{
+  font-size: 20px;
+  margin-top: 0;
+  color: black;
+}
+.detial-anime h6:hover{
+  color: #ee6e73;
+}
+.detial-anime p{
+  margin-top: 5px;
+  margin-bottom: 0;
+  position: relative;
+  color: gray;
+  width: 500px;
+  height: 65px;
+  overflow-y: hidden;
+}
+
+@media only screen and (max-width : 1160px) {
+  .detial-anime p{
+    width: 450px;
+  }
+}
+@media only screen and (max-width : 1080px) {
+  .detial-anime p{
+    width: 390px;
+  }
+}
+@media only screen and (max-width : 992px) {
+  .detial-anime p{
+    width: 500px;
+  }
+}
+@media only screen and (max-width : 779px) {
+  .detial-anime p{
+    width: 400px;
+  }
+}
+@media only screen and (max-width : 674px) {
+  .detial-anime p{
+    width: 300px;
+  }
+}
+@media only screen and (max-width : 600px) {
+  .list-anime ul li a img{
+    width: 90%;
+    height: 90%;
+  }
+  .detial-anime{
+    margin-top: 6px;
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,77 @@
+.rank{
+  width: 4%;
+  font-size: 36px;
+}
+.gambar-anime{
+  float: left;
+  width: 80px;
+  height: 100px;
+}
+.detial-anime{
+  float: left;
+  margin-left: 10px;
+}
+.detial-anime span{
+  display: block;
+  color: grey;
+}
+.judul-anime{
+  font-size: 20px;
+  color: black;
+}
+.judul-anime:hover{
+  color:#ee6e73;
+}
+#ratting{
+  width: 10%;
+}
+.ratting-mal{
+  width: 100%;
+  display: block;
+}
+.ratting-my{
+  width: 100%;
+  display: block;
+}
+.ratting-mal,.ratting-my{
+  float: left;
+  /* display: inline; */
+  font-size: 20px;
+}
+.ratting .material-icons,.icon{
+  position: relative;
+  float: left;
+  font-size: 2.1rem;
+  padding-top: 3px;
+}
+.ratting .number{
+  position: relative;
+  float: left;
+  font-size: 28px;
+
+}
+#status{
+  /* width: 20%; */
+}
+
+@media only screen and (max-width : 1060px) {
+  .ratting .material-icons,.icon{
+    font-size: 1.5rem;
+  }
+  .ratting .number{
+    font-size: 1.5rem;
+
+  }
+}
+@media only screen and (max-width : 600px) {
+  .ratting .material-icons,.icon{
+    font-size: 1rem;
+  }
+  .ratting .number{
+    font-size: 1rem;
+  }
+  .judul-anime{
+    font-size: 1rem;
+  }
+
+}

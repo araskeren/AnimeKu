@@ -1,0 +1,76 @@
+.menu .row{
+  margin-bottom: 5px;
+}
+
+.filter{
+  height: 60px;
+}
+.filter .row{
+  margin-bottom: 0;
+}
+.musim {
+  margin-top: 1em;
+  background-color: #fff;
+  color: #ee6e73;
+  box-shadow: 0 0 0;
+  line-height: 30px;
+}
+
+.musim a{
+  color: #ee6e73;
+  border: 1px solid #ee6e73;
+}
+
+.musim a:hover,.musim .active{
+  background-color: #ee6e73;
+  color: #fff;
+}
+h6{
+  font-size: 1.2rem;
+}
+.daftar-anime{
+
+}
+.daftar-anime li a{
+
+}
+.block-anime{
+  float:left;
+  margin-right: .5em;
+}
+.block-anime img{
+  width: 136px;
+  height: 190px;
+  display: inline-block;
+}
+.block-anime:hover{
+  border: 2px solid #ee6e73;
+}
+.block-anime span{
+  text-align: center;
+  width: 136px;
+  display: block;
+}
+.block-anime span:hover{
+  color: #ee6e73;
+}
+
+.modal{
+  width: 400px;
+  height: 250px;
+}
+.modal-content{
+  height: 75%;
+}
+
+@media only screen and (max-width: 600px){
+  .musim{
+    margin-left: .5em;
+  }
+  .sorting{
+    margin-right: .5em;
+  }
+  .content{
+    margin-left: .5em;
+  }
+}

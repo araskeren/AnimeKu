@@ -1,0 +1,100 @@
+h5{
+  margin-bottom: 0;
+  text-decoration: underline;
+}
+.image {
+   position: relative;
+   float: left;
+   height: 225px;
+   margin-right: .5em;
+}
+.image img{
+  width: 100%;
+  height: 188px;
+}
+.image .episode,.image .status,.image .season,.image .is-watch{
+  color: white;
+  background-color: #f53e3e;
+  padding: 5px;
+  position: absolute;
+  top: 3px;
+  font-size: 18px;
+}
+.image .status{
+  background-color: #3e6ef5;
+  right: 1px;
+}
+.image .season,.image .is-watch{
+  background-color: #ee6e73;
+  top:160px;
+  bottom: 40px;
+  right: 1px;
+  font-size: 15px;
+  padding: 1px;
+}
+.image .is-watch{
+  display: none;
+}
+.image .play-button{
+  color: #ee6e73;
+  display: none;
+  position: absolute;
+  top:20%;
+  left: 35%;
+}
+.image:hover .play-button,.image:hover .is-watch{
+  display: block;
+}
+.image:hover .season{
+  display: none;
+}
+.image:hover img{
+  box-shadow: 0 0 10px black;
+  opacity: 0.3;
+}
+.judul{
+  font-size: 20px;
+  color: black;
+  height: 30px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.judul:hover{
+  color:#ee6e73;
+}
+#anime_page_list{
+  margin-top: 1em;
+  text-align: center;
+}
+@media only screen and (min-width: 1300px){
+  .row .col.l3{
+    width: 20%;
+  }
+}
+@media only screen and (max-width: 1300px){
+  .row .col.l3{
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 950px){
+  .row .col.l3{
+    width: 32%;
+  }
+}
+@media only screen and (max-width: 740px){
+  .row .col.s6{
+    width: 45%;
+    margin-left: .5em;
+  }
+}
+
+@media only screen and (max-width: 500px){
+  .row .col.s6{
+    width: 100%;
+    margin-left: .5em;
+  }
+  h5{
+    margin-left: .4em;
+  }
+}

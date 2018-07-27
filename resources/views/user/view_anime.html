@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+      <!-- <link rel="stylesheet" href="css/materialize.css"> -->
+      <link rel="stylesheet" href="css/master.css">
+      <link rel="stylesheet" href="css/view_vidio.css">
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+      <!-- Navigasi -->
+      <nav style="position:fixed;z-index: 99;">
+      <div class="nav-wrapper">
+        <a id="togle-menu" href="#" data-activates="slide-out" class="button-collapse"><i class="large material-icons">menu</i></a>
+        <a id="brand" href="#" class="brand-logo hide-on-small-only">Streaming Anime</a>
+
+        <ul class="right">
+          <li><a href=""><i class="material-icons hide-on-small-only">file_upload</i></a></li>
+          <li><a href=""><i class="material-icons hide-on-small-only">dashboard</i></a></li>
+          <li><a href=""><i class="medium material-icons hide-on-small-only">notifications</i></a></li>
+          <li><a class="dropdown-button" data-activates="profile"><i class="medium material-icons">account_circle</i></a></li>
+        </ul>
+        <form id="pencarian-anime" >
+        <div class="input-field">
+          <input id="search" type="search" required onkeyup="getBlogs(this.value,0);"style="height">
+          <label class="label-icon" style="margin:0;" for="search"><i class="material-icons">search</i></label>
+          <i class="material-icons">close</i>
+          <div id="searchResults" ></div>
+        </div>
+      </form>
+        <!-- Dropdown Structure -->
+        <ul id="profile" class="dropdown-content collection">
+            <li class="collection-item avatar">
+                <img src="http://materializecss.com/images/yuna.jpg" alt="" class="circle">
+                <h6>Damis Bachtiar</h6>
+                <p>damis.bachtiar@gmail.com</p>
+            </li>
+            <li class="divider"></li>
+            <li><a href="#!"><i class="material-icons">lock_outline</i>Logout</a></li>
+            <li class="divider"></li>
+            <li><a href="#!"><i class="material-icons">settings</i>Pengaturan</a></li>
+            <li><a href="#!"><i class="material-icons">help_outline</i>Bantuan</a></li>
+            <li><a href="#!"><i class="material-icons">message</i>Kirim Masukan</a></li>
+        </ul>
+      </div>
+      </nav>
+      <!-- end navigasi -->
+      <!--Import jQuery before materialize.js-->
+      <!-- Nav Menu -->
+      <ul id="slide-out" class="side-nav fixed" style="overflow-y: scroll;">
+        <br>
+        <li><a href="index.html"><i class="material-icons">home</i>Halaman Utama</a></li>
+        <li><a href="anime_yang_diikuti.html"><i class="material-icons">subscriptions</i>Anime Yang Di Ikuti</a></li>
+        <li><a href="anime_popular.html"><i class="material-icons">whatshot</i>Anime Populer</a></li>
+        <li><a href="browse_all.html"><i class="material-icons">youtube_searched_for</i>Browse Anime</a></li>
+        <li><a href="browse_top_anime.html"><i class="material-icons">star</i>Top Anime</a></li>
+        <li><div class="divider"></div></li>
+        <li><a class="subheader">Koleksi</a></li>
+        <li><a href="history.html"><i class="material-icons">history</i>Riwayat Tontonan</a></li>
+        <li><a href="tonton_nanti.html"><i class="material-icons">watch_later</i>Tonton Nanti</a></li>
+        <li><div class="divider"></div></li>
+        <li><a class="subheader">Anime Yang Di Ikuti</a></li>
+        <li><a href="#!"><i class="material-icons"></i>Overlord</a></li>
+        <li><a href="#!"><i class="material-icons"></i>Overlord</a></li>
+        <li><a href="#!"><i class="material-icons"></i>Overlord</a></li>
+        <li><a href="#!"><i class="material-icons"></i>Overlord</a></li>
+        <li><a href="#!"><i class="material-icons"></i>Overlord</a></li>
+        <li><a href="#!"><i class="material-icons"></i>Overlord</a></li>
+        <li><a href="#!"><i class="material-icons"></i>Overlord</a></li>
+        <li><a href="#!"><i class="material-icons"></i>Overlord</a></li>
+        <li><div class="divider"></div></li>
+        <li><a href="#!"><i class="material-icons">settings</i>Pengaturan</a></li>
+        <li><a href="#!"><i class="material-icons">message</i>Kirim Masukan</a></li>
+        <li><a href="#!"><i class="material-icons">help_outline</i>Bantuan</a></li>
+
+      </ul>
+      <!-- End Nav Menu -->
+      <main>
+        <div class="row">
+          <div class="container">
+          <div class="col s12 m12 l8">
+            <div class="col s12 m12 l12">
+            <div class="judul_anime">
+              <h5>Sakurasou No Pet No Kanojo Ep.01</h5>
+            </div>
+          </div>
+          <div class="col s12 m12 l12">
+            <div class="control_anime">
+              <div class="col s2 m2 l1 hide-on-small-and-down">
+                <a href="#!"><i class="medium material-icons">arrow_back</i></a>
+              </div>
+              <div class="col s5 m2 l2">
+                <select>
+                    <option class="blue-text text-darken-2" value = "" disabled selected>Pilih Episode</option>
+                    <option value = "1">Mango</option>
+                    <option value = "2">Orange</option>
+                    <option value = "3">Apple</option>
+                 </select>
+              </div>
+              <div class="col s5 m2 l2 ">
+                <select>
+                    <option class="blue-text text-darken-2" value = "" disabled selected>Pilih Server</option>
+                    <option class="blue-text text-darken-2"value = "1">Mango</option>
+                    <option value = "2">Orange</option>
+                    <option value = "3">Apple</option>
+                 </select>
+              </div>
+              <div class="col s5 m3 l3">
+                <a class="waves-effect waves-light btn hide-on-small-and-down"><i class="material-icons left">menu</i>Semua Episode</a>
+              </div>
+              <div class="col s2 m1 l1">
+                <a class="btn-floating btn-large waves-effect waves-light hide-on-small-and-down" href="#!"><i class="material-icons">archive</i></a>
+              </div>
+              <div class="col s2 m1 l1">
+                <a class="btn-floating btn-large waves-effect waves-light hide-on-small-and-down" href="#!"><i class="material-icons">refresh</i></a>
+              </div>
+              <div class="col s2 m1 l1 hide-on-small-and-down">
+                <a href="#!"><i class="medium material-icons">arrow_forward</i></a>
+              </div>
+
+            </div>
+          </div>
+          <div class="col s12 m12 l11">
+            <div class="vidio_anime">
+              <div class="video-container">
+                <iframe width="853" height="480" src="https://www.youtube.com/embed/V4wKI1F_6hY" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m12 l11">
+            <div id="hidden_control" class="control_anime hide-on-med-and-up">
+              <div class="col s2">
+                <a class="btn-floating btn waves-effect waves-light show-on-small" href="#!"><i class="material-icons">arrow_back</i></a>
+              </div>
+              <div class="col s5">
+                <a class="waves-effect waves-light btn show-on-small">All Episode</a>
+              </div>
+              <div class="col s2">
+                <a class="btn-floating btn waves-effect waves-light show-on-small" href="#!"><i class="material-icons">archive</i></a>
+              </div>
+              <div class="col s2">
+                <a class="btn-floating btn waves-effect waves-light show-on-small" href="#!"><i class="material-icons">refresh</i></a>
+              </div>
+            </div>
+          </div>
+          <div class="komentar">
+            <div class="col s12 m12 l11">
+              <div class="row">
+                <div class="container">
+                  <div class="input-field col s12 m12 l12">
+                    <i class="material-icons prefix">account_circle</i>
+                    <textarea id="kolomkomentar" class="materialize-textarea"></textarea>
+                    <label for="kolomkomentar">Komentar</label>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="container">
+                  <a class="waves-effect waves-light blue btn">komentar</a>
+                  <a class="waves-effect waves-light btn-flat">cancel</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="list-komentar">
+            <div class="col s12 m12 l11">
+              <div class="row">
+                <div class="row valign-wrapper">
+                  <div class="col s1">
+                    <img src="img/photo.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                  </div>
+                  <div class="col s10">
+                    <b>Damis Bachtiar</b> <span> > 25 Menit yang lalu</span>
+                    <br>
+                    <p class="black-text">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div id="101" class="row valign-wrapper">
+                  <div class="col s1">
+                    <img src="img/photo.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                  </div>
+                  <div class="col s10">
+                    <b>Damis Bachtiar</b> <span> > 25 Menit yang lalu</span>
+                    <br>
+                    <p class="black-text">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div id="102" class="row valign-wrapper">
+                  <div class="col s1">
+                    <img src="img/photo.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                  </div>
+                  <div class="col s10">
+                    <b>Damis Bachtiar</b> <span> > 25 Menit yang lalu</span>
+                    <br>
+                    <p class="black-text">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="col s12 m12 l4">
+            <div class="judul_anime">
+              <h5>Berikutnya</h5>
+              <div class="side-list">
+                <div class="row">
+                  <div class="col s6 m6 l6">
+                    <div class="vidio_side_anime">
+                      <div class="video-container">
+                        <iframe width="400" height="180" src="https://www.youtube.com/embed/V4wKI1F_6hY" frameborder="0" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col s6 m6 l6">
+                    <div class="judul_side_anime">
+                      <div class="nama_anime">Sakurasou No Pet No Kanojo Ep.2</div>
+                      <div class="genre">
+                        <a href="#"><div class="chip">Comedy</div></a>
+                        <a href="#"><div class="chip">Comedy</div></a>
+                        <a href="#"><div class="chip">Comedy</div></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s6 m6 l6">
+                    <div class="vidio_side_anime">
+                      <div class="video-container">
+                        <iframe width="400" height="280" src="https://www.youtube.com/embed/V4wKI1F_6hY" frameborder="0" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col s6 m6 l6">
+                    <div class="judul_side_anime">
+                      <div class="nama_anime">Sakurasou No Pet No Kanojo Ep.2</div>
+                      <div class="genre">
+                        <a href="#"><div class="chip">Comedy</div></a>
+                        <a href="#"><div class="chip">Comedy</div></a>
+                        <a href="#"><div class="chip">Comedy</div></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s6 m6 l6">
+                    <div class="vidio_side_anime">
+                      <div class="video-container">
+                        <iframe width="400" height="280" src="https://www.youtube.com/embed/V4wKI1F_6hY" frameborder="0" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col s6 m6 l6">
+                    <div class="judul_side_anime">
+                      <div class="nama_anime">Sakurasou No Pet No Kanojo Ep.2</div>
+                      <div class="genre">
+                        <a href="#"><div class="chip">Comedy</div></a>
+                        <a href="#"><div class="chip">Comedy</div></a>
+                        <a href="#"><div class="chip">Comedy</div></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s6 m6 l6">
+                    <div class="vidio_side_anime">
+                      <div class="video-container">
+                        <iframe width="400" height="280" src="https://www.youtube.com/embed/V4wKI1F_6hY" frameborder="0" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col s6 m6 l6">
+                    <div class="judul_side_anime">
+                      <div class="nama_anime">Sakurasou No Pet No Kanojo Ep.2</div>
+                      <div class="genre">
+                        <a href="#"><div class="chip">Comedy</div></a>
+                        <a href="#"><div class="chip">Comedy</div></a>
+                        <a href="#"><div class="chip">Comedy</div></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s6 m6 l6">
+                    <div class="vidio_side_anime">
+                      <div class="video-container">
+                        <iframe width="400" height="280" src="https://www.youtube.com/embed/V4wKI1F_6hY" frameborder="0" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col s6 m6 l6">
+                    <div class="judul_side_anime">
+                      <div class="nama_anime">Sakurasou No Pet No Kanojo Ep.2</div>
+                      <div class="genre">
+                        <a href="#"><div class="chip">Comedy</div></a>
+                        <a href="#"><div class="chip">Comedy</div></a>
+                        <a href="#"><div class="chip">Comedy</div></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s6 m6 l6">
+                    <div class="vidio_side_anime">
+                      <div class="video-container">
+                        <iframe width="400" height="280" src="https://www.youtube.com/embed/V4wKI1F_6hY" frameborder="0" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col s6 m6 l6">
+                    <div class="judul_side_anime">
+                      <div class="nama_anime">Sakurasou No Pet No Kanojo Ep.2</div>
+                      <div class="genre">
+                        <a href="#"><div class="chip">Comedy</div></a>
+                        <a href="#"><div class="chip">Comedy</div></a>
+                        <a href="#"><div class="chip">Comedy</div></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s6 m6 l6">
+                    <div class="vidio_side_anime">
+                      <div class="video-container">
+                        <iframe width="400" height="280" src="https://www.youtube.com/embed/V4wKI1F_6hY" frameborder="0" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col s6 m6 l6">
+                    <div class="judul_side_anime">
+                      <div class="nama_anime">Sakurasou No Pet No Kanojo Ep.2</div>
+                      <div class="genre">
+                        <a href="#"><div class="chip">Comedy</div></a>
+                        <a href="#"><div class="chip">Comedy</div></a>
+                        <a href="#"><div class="chip">Comedy</div></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s6 m6 l6">
+                    <div class="vidio_side_anime">
+                      <div class="video-container">
+                        <iframe width="400" height="280" src="https://www.youtube.com/embed/V4wKI1F_6hY" frameborder="0" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col s6 m6 l6">
+                    <div class="judul_side_anime">
+                      <div class="nama_anime">Sakurasou No Pet No Kanojo Ep.2</div>
+                      <div class="genre">
+                        <a href="#"><div class="chip">Comedy</div></a>
+                        <a href="#"><div class="chip">Comedy</div></a>
+                        <a href="#"><div class="chip">Comedy</div></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          </div>
+        </div>
+      </main>
+      <!-- End Nav Menu -->
+      <!-- Script -->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.js"></script>
+      <script type="text/javascript">
+
+      $(document).ready(function() {
+          $('select').material_select();
+      });
+      $('.button-main').sideNav('hide');
+      $('.button-collapse').sideNav({
+          menuWidth: 300, // Default is 300
+          edge: 'left', // Choose the horizontal origin
+          closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+          draggable: true, // Choose whether you can drag to open on touch screens,
+          onOpen: function(el) { /* Do Stuff */ }, // A function to be called when sideNav is opened
+          onClose: function(el) { /* Do Stuff*/ }, // A function to be called when sideNav is closed
+        }
+      );
+      $('.dropdown-button').dropdown({
+        inDuration: 300,
+        outDuration: 225,
+        constrainWidth: false, // Does not change width of dropdown to that of the activator
+        hover: true, // Activate on hover
+        gutter: 0, // Spacing from edge
+        belowOrigin: true, // Displays dropdown below the button
+        alignment: 'right', // Displays dropdown with edge aligned to the left of button
+        stopPropagation: false // Stops event propagation
+        }
+      );
+
+      </script>
+    </body>
+  </html>

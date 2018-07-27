@@ -1,0 +1,72 @@
+i.medium{
+  font-size: 3rem;
+}
+.control_anime .col.l2{
+  margin-right: 1em;
+}
+.control_anime .btn{
+  margin-top: .7em;
+  margin-right: 1em;
+  background-color: #ee6e73;
+}
+.control_anime i.material-icons{
+  background-color: #ee6e73;
+  color: white;
+
+}
+.control_anime .col.s2.m2.l1{
+  width: 6%;
+}
+.control_anime ul.dropdown-content.select-dropdown li span{
+    color: #ee6e73; /* no need for !important :) */
+}
+
+.judul_side_anime{
+  margin-left: 1em;
+}
+.judul_side_anime .nama_anime{
+  font-size: 18px;
+}
+.judul_side_anime .genre{
+  margin-top: .2em;
+  font-size: 18px;
+  margin-bottom: 1em;
+}
+.judul_side_anime .genre a{
+  position: static;
+  top:-5em;
+}
+.side-list .row{
+  margin-bottom: 10px;
+}
+.komentar{
+  top: 10px;
+}
+.komentar .row{
+  margin-bottom: 0;
+}
+.komentar .row .container{
+  padding-top:1em;
+}
+.komentar .row .container .btn,.btn-flat{
+  float: right;
+  margin-left: 1em;
+}
+#kolomkomentar{
+  padding: 0;
+}
+.list-komentar{
+  margin-top: 1em;
+}
+@media only screen and (max-width : 992px){
+  .judul_side_anime .nama_anime,.genre{
+    font-size: 15px;
+  }
+  .judul_side_anime .col.s6.m6.l6{
+    width: 70%;
+  }
+  .black-text{
+    height: 40px;
+    overflow-y: hidden;
+  }
+}

@@ -1,0 +1,35 @@
+.container{
+  padding-top: 1em;
+}
+.preview-anime{
+  margin-top: 5em;
+}
+
+#daftar-stream{
+  overflow-y: scroll;
+  max-height: 794.4px;
+}
+#daftar-download-batch{
+  overflow-y: scroll;
+  max-height: 750px;
+}
+#daftar-single-link{
+  overflow-y: scroll;
+  max-height: 235px;
+}
+@media only screen and (max-width : 600px){
+    /* styles for medium screens and down */
+
+    #daftar-stream{
+      overflow-y: scroll;
+      max-height: 500px;
+    }
+    #daftar-download-batch{
+      overflow-y: scroll;
+      max-height: 300px;
+    }
+    #daftar-single-link{
+      overflow-y: scroll;
+      max-height: 300px;
+    }
+}

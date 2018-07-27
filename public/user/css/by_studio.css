@@ -1,0 +1,52 @@
+td{
+  padding:0 0;
+}
+.filter{
+  margin-left: 5px;
+}
+.studio{
+  width: 25%;
+}
+.studio .nama{
+  color: #ee6e73;
+  font-size: 2rem;
+}
+.studio .nama:hover{
+  color: #039be5;
+}
+.studio span{
+  display: block;
+}
+.studio .rate a{
+  display: block;
+  vertical-align: middle;
+}
+.studio .rate a:hover{
+  color: #ee6e73;
+}
+.block-anime{
+  float:left;
+  margin-right: .5em;
+}
+.block-anime img{
+  width: 136px;
+  height: 190px;
+  display: inline-block;
+}
+.block-anime:hover{
+  border: 2px solid #ee6e73;
+}
+.block-anime span{
+  text-align: center;
+  width: 136px;
+  display: block;
+}
+.block-anime span:hover{
+  color: #ee6e73;
+}
+
+@media only screen and (max-width: 600px){
+  .studio{
+    width:28%;
+  }
+}

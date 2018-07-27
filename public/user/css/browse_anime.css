@@ -1,0 +1,19 @@
+
+.content img{
+  height: 250px;
+}
+.content .card-title{
+  font-size: 15px;
+  font-weight: bold;
+}
+.content p a{
+  font-size: 12px;
+}
+.content .card{
+  margin-left: 1em;
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width : 1330px) {
+
+}
